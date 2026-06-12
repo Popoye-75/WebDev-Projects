@@ -1,0 +1,192 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  width: 100%;
+  font-family: var(--font-heading);
+  font-size: var(--font-40px);
+  color: var(--font-color-black);
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.gamePage {
+  width: 100%;
+  height: 100vh;
+  padding: 6rem 2rem 3rem;
+  flex-direction: column;
+
+  /* if you want to add background video than first comment below background than uncomment source tag in html in the class of background-video and pass the link what ever video you want */
+  
+  /* background-color: var(--primary-blue); */
+  backdrop-filter: blur(4rem);
+  overflow: hidden;
+  z-index: 1;
+}
+s .background-video {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.gamePage-console {
+  width: inherit;
+  height: calc(100% - 9rem);
+}
+
+.leftConsole {
+  width: 75%;
+  height: 100%;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.questionBox {
+  width: 100%;
+  height: 25%;
+}
+
+.lifeline {
+  width: 50%;
+  height: 13%;
+  border-radius: 100px;
+  background-color: var(--bg-box-trspt);
+  /* backdrop-filter: blur(50px); */
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.lifeline span {
+  width: calc(100% / 4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var();
+  border-radius: 100px;
+  font-size: var(--font-32px);
+  /* text-align: center;
+  line-height: 2; */
+  cursor: pointer;
+  transition: var(--trns-effect);
+}
+
+.lifeline span:hover {
+  background-color: var(--primary-blue);
+  color: var(--font-color-white);
+  transform: scale(1);
+}
+
+.questionBox p,
+.timer p {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-paragraph);
+  font-size: var(--font-16px);
+  font-weight: var(--font-mid);
+  color: var(--font-color-black);
+  border-radius: 100px;
+  background-color: var(--bg-box-trspt);
+  /* backdrop-filter: blur(50px); */
+  box-shadow: var(--box-shadow);
+  align-content: center;
+  text-align: center;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+}
+
+.timer p {
+  visibility: visible;
+  width: 8rem;
+  height: 8rem;
+  font-size: var(--font-32px);
+}
+
+.options {
+  width: 100%;
+  height: 30%;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+  background-color: var(--bg-box-trspt);
+  /* backdrop-filter: blur(50px); */
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: upper-alpha;
+  list-style-position: inside;
+}
+
+.options li {
+  width: calc(90% / 2);
+  height: calc(75% / 2);
+  font-family: var(--font-paragraph);
+  font-size: var(--font-16px);
+  font-weight: var(--font-mid);
+  color: var(--font-color-black);
+  align-content: center;
+  background-color: var(--bg-color-gray);
+  align-content: center;
+  padding: 0.8rem;
+  border-radius: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--trns-effect);
+}
+
+.options li:hover {
+  background-color: var(--primary-blue);
+  color: var(--font-color-white);
+}
+
+.rightConsole {
+  width: 20%;
+  height: 100%;
+  justify-content: start;
+  margin-left: 2rem;
+  border-radius: 15px;
+  /* backdrop-filter: blur(5rem); */
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-box-trspt);
+  overflow: hidden;
+}
+
+.rightConsole ol {
+  flex-direction: column;
+  list-style: disc;
+}
+
+.rightConsole ol li {
+  width: 75%;
+  font-family: var(--font-paragraph);
+  font-size: var(--font-16px);
+  text-align: left;
+  padding-left: 2.8rem;
+  list-style-position: inside;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rightConsole ol li:hover {
+  background-color: var(--secondary-green);
+  border-radius: 100px;
+}

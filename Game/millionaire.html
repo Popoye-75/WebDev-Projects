@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test.com|CSS</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/numberhunt.css" />
+    <link rel="stylesheet" href="/millionaire.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+<style>
+  body{
+    background-color: rgb(204, 93, 93);
+  }
+</style>
+  <body>
+    <div class="main-header">
+      <div class="main-header-logo">
+        <a href="/index.html"></a>
+      </div>
+      <nav class="main-header-navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li class="main-header-navbar-dropdown">
+            <a href="#">Games</a>
+            <div class="main-header-navbar-dropdown-content">
+              <a href="/numberhunt.html">Number Hunt</a>
+              <a href="/millionaire.html">Millionaire</a>
+              <a href="#">Tic Tac Toe</a>
+              <a href="#">Spin Wheel</a>
+            </div>
+          </li>
+          <li><a href="#">Services</a></li>
+          <li class="main-header-navbar-dropdown"><a href="#">Contact</a></li>
+          <li><a href="/about.html">About us</a></li>
+        </ul>
+      </nav>
+      <button onclick="showLogin()" class="main-header-login">Login</button>
+    </div>
+
+    <!-- -------------LogIn page------------------ -->
+
+    <div id="loginInterface" class="login">
+      <div class="login-info">
+        <h2>Login</h2>
+        <form action="#">
+          <label for="loginEmail">Email</label><br />
+          <input id="loginEmail" type="email" placeholder="Email" /><br />
+          <label for="loginPassword">Password</label><br />
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+          /><br />
+          <label for="rememberMe">
+            <input id="rememberMe" type="checkbox" /> Remember me </label
+          ><br />
+          <button type="submit" class="login-info-btn btn">Log In</button>
+        </form>
+        <p>
+          Don't have an account? <a onclick="showSignUp()" href="#">Sign Up</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- -------------SignUp page------------------ -->
+
+    <div id="signInterface" class="signUp login">
+      <div class="login-info">
+        <h2>Sign Up</h2>
+        <form action="#">
+          <label for="signName">Name</label><br />
+          <input id="signName" type="text" placeholder="Name" /><br />
+          <label for="signEmail">Email</label><br />
+          <input id="signEmail" type="email" placeholder="Email" /><br />
+          <label for="signPassword">Password</label><br />
+          <input
+            id="signPassword"
+            type="password"
+            placeholder="Password"
+          /><br />
+          <button type="submit" class="singUp login-info-btn btn">
+            Submit
+          </button>
+        </form>
+        <p>
+          Aready have an account? <a onclick="showLogin()" href="#">Sign In</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ------------Millionaire Game-------------->
+    <div class="background-video">
+      <video autoplay loop muted class="video">
+        <!-- <source src="/assets/images/loop.mp4" type="video/mp4" /> -->
+      </video>
+    </div>
+    <main class="gamePage">
+      <h1>Millionaire</h1>
+      <div class="gamePage-console flex">
+        <div class="leftConsole flex">
+          <div class="lifeline flex">
+            <span><i class="fa-solid fa-video"></i></span
+            ><span><i class="fa-solid fa-right-left"></i></span
+            ><span><i class="fa-solid fa-square-poll-vertical"></i></span
+            ><span><i class="fa-solid fa-comments"></i></span>
+          </div>
+          <div class="timer"><p>30</p></div>
+          <div class="questionBox">
+            <p id="question">
+              This is question Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Recusandae perferendis inventore laboriosam in
+              fugiat dolores quibusdam porro blanditiis laborum obcaecati hic
+              unde nemo et, debitis nisi aperiam laudantium ?
+            </p>
+          </div>
+          <ol class="options flex choiceOption">
+            <li>Put</li>
+            <li>Your</li>
+            <li>Option</li>
+            <li>Here</li>
+          </ol>
+        </div>
+        <div class="rightConsole">
+          <h2
+            style="
+              width: 100%;
+              border-bottom: 2px solid var(--bg-color-darkgray);
+              font-weight: var(--font-semibold);margin: 0.1rem;
+            "
+          >
+            Winning Amount
+          </h2>
+          <ol class="flex">
+            <li>7,00,00,000</li>
+            <li>1,00,00,000</li>
+            <li>50,00,000</li>
+            <li>25,00,000</li>
+            <li>12,50,000</li>
+            <li>6,40,000</li>
+            <li>3,20,000</li>
+            <li>1,60,000</li>
+            <li>80,000</li>
+            <li>40,000</li>
+            <li>20,000</li>
+            <li>10,000</li>
+            <li>5000</li>
+            <li>3000</li>
+            <li>2000</li>
+            <li class="active">1000</li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <footer class="foot-container">
+      <div class="foot-container-box">
+        <div class="foot-container-box-info">
+          <img src="/assets/images/logo.png" alt="Website Logo" />
+          <h4>Univers Gamers</h4>
+          <p>
+            We are dedicated to providing reliable solutions and quality
+            services that help businesses and individuals grow with confidence.
+          </p>
+        </div>
+        <div class="foot-container-box-info">
+          <h4>Navigation</h4>
+          <div class="page-link">
+            <a href="">Home</a>
+            <a href="">Services</a><a href="">Blogs</a>
+            <a href="">About</a>
+          </div>
+        </div>
+        <div class="foot-container-box-info">
+          <h4>Contact</h4>
+          <p>
+            1234 Street Park Avenue City, AA 99999 +1(555)123 4567
+            info@example.com
+          </p>
+        </div>
+        <div class="foot-container-box-info">
+          <h4>Social</h4>
+          <div class="footcontainer-box-info-social">
+            <a href=""
+              ><img src="/assets/images/facebook.png" alt="Facebook icon"
+            /></a>
+            <a href=""><img src="/assets/images/X.png" alt="X icon" /></a>
+            <a href=""
+              ><img src="/assets/images/linkedin.png" alt="Linkedin icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <code> &copy; 2025 Univers Gamers All Rights Reserved.</code>
+    </footer>
+    <!-- 00d0430 -->
+  </body>
+  <script src="app.js"></script>
+</html>

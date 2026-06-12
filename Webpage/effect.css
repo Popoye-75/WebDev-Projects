@@ -1,0 +1,20 @@
+a:hover{
+    font: 1rem;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 10px;
+    color:rgb(0, 0, 0);
+    font-family: 'Rosario';
+    background-color: rgba(255, 255, 255, 0.772);
+}
+
+h1{
+    transition: 1s;
+}
+h1:hover{
+    transition: 1s;
+    transform: scale(1.5);
+}
+.logo:hover{
+    transform: rotate(180deg);
+}

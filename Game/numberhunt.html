@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test.com|CSS</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/numberhunt.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="main-header">
+    <div class="main-header-logo">
+      <a href="/index.html"></a>
+    </div>
+    <nav class="main-header-navbar">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li class="main-header-navbar-dropdown">
+          <a href="#">Games</a>
+          <div class="main-header-navbar-dropdown-content">
+            <a href="/numberhunt.html">Number Hunt</a>
+            <a href="/millionaire.html">Millionaire</a>
+            <a href="#">Tic Tac Toe</a>
+            <a href="#">Spin Wheel</a>
+          </div>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li class="main-header-navbar-dropdown"><a href="#">Contact</a></li>
+        <li><a href="/about.html">About us</a></li>
+      </ul>
+    </nav>
+    <button onclick="showLogin()" class="main-header-login">Login</button>
+  </div>
+
+  <!-- -------------LogIn page------------------ -->
+
+  <div id="loginInterface" class="login"> -->
+    <div class="login-info">
+      <h2>Login</h2>
+      <form action="#">
+        <label for="loginEmail">Email</label><br />
+        <input id="loginEmail" type="email" placeholder="Email" /><br />
+        <label for="loginPassword">Password</label><br />
+        <input id="loginPassword" type="password" placeholder="Password" /><br />
+        <label for="rememberMe">
+          <input id="rememberMe" type="checkbox" /> Remember me </label><br />
+        <button type="submit" class="login-info-btn btn">Log In</button>
+      </form>
+      <p>
+        Don't have an account? <a onclick="showSignUp()" href="#">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- -------------SignUp page------------------ -->
+
+  <div id="signInterface" class="signUp login">
+    <div class="login-info">
+      <h2>Sign Up</h2>
+      <form action="#">
+        <label for="signName">Name</label><br />
+        <input id="signName" type="text" placeholder="Name" /><br />
+        <label for="signEmail">Email</label><br />
+        <input id="signEmail" type="email" placeholder="Email" /><br />
+        <label for="signPassword">Password</label><br />
+        <input id="signPassword" type="password" placeholder="Password" /><br />
+        <button type="submit" class="singUp login-info-btn btn">
+          Submit
+        </button>
+      </form>
+      <p>
+        Aready have an account? <a onclick="showLogin()" href="#">Sign In</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- --------------Game------------------ -->
+  <main class="game centerBox">
+    <div class="game-console">
+      <h1>Number Hunt</h1>
+      <div class="game-console-box centerBox">
+        <div class="game-console-box-info">
+          <h2>Hidden Number</h2>
+          <p id="hidden">?</p>
+        </div>
+        <div class="game-console-box-info">
+          <div class="game-console-box-info-timer">
+            <h2>Remaining Time</h2>
+            <p id="remainingTime">--:--</p>
+          </div>
+          <h2>Message</h2>
+          <p class="score-update">Try numbers</p>
+        </div>
+        <div class="game-console-box-info">
+          <h2>Mode</h2>
+          <div class="game-console-box-mode">
+            <button class="timerBtn">
+              <i class="fa-solid fa-stopwatch-20"><span>Timer</span></i>
+            </button>
+            <button class="chanceBtn">
+              <i class="fa-solid fa-dice"><span>Chance</span></i>
+            </button>
+            <div id="setTime" class="game-console-box-mode-userInput time">
+              <h2>Timer (in Seconds)</h2>
+              <hr />
+              <span class="ten">10</span>
+              <span class="thirty">30</span>
+              <span class="sixty">60</span>
+            </div>
+            <div id="setChance" class="game-console-box-mode-userInput chance">
+              <h2>Chance</h2>
+              <hr />
+              <span class="five">5</span>
+              <span class="ten">10</span>
+              <span class="fifteen">15</span>
+            </div>
+          </div>
+          <div class="game-console-box-info-btn">
+            <button onclick="startGame()" id="startBtn">Start</button>
+            <button onclick="resetGame()" id="resetBtn">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-console-input">
+        <div class="game-console-input-chance">
+          <h2>Remaining Chance:</h2>
+          <p id="remainingChance">--</p>
+        </div>
+
+        <table class="game-console-input-keyboard">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
+            <td>37</td>
+            <td>38</td>
+            <td>39</td>
+            <td>40</td>
+            <td>41</td>
+            <td>42</td>
+            <td>43</td>
+            <td>44</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <td>46</td>
+            <td>47</td>
+            <td>48</td>
+            <td>49</td>
+            <td>50</td>
+            <td>51</td>
+            <td>52</td>
+            <td>53</td>
+            <td>54</td>
+            <td>55</td>
+            <td>56</td>
+            <td>57</td>
+            <td>58</td>
+            <td>59</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td>62</td>
+            <td>63</td>
+            <td>64</td>
+            <td>65</td>
+            <td>66</td>
+            <td>67</td>
+            <td>68</td>
+            <td>69</td>
+            <td>70</td>
+            <td>71</td>
+            <td>72</td>
+            <td>73</td>
+            <td>74</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>76</td>
+            <td>77</td>
+            <td>78</td>
+            <td>79</td>
+            <td>80</td>
+            <td>81</td>
+            <td>82</td>
+            <td>83</td>
+            <td>84</td>
+            <td>85</td>
+            <td>86</td>
+            <td>87</td>
+            <td>88</td>
+            <td>89</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td>92</td>
+            <td>93</td>
+            <td>94</td>
+            <td>95</td>
+            <td>96</td>
+            <td>97</td>
+            <td>98</td>
+            <td>99</td>
+            <td>100</td>
+            <td>101</td>
+            <td>102</td>
+            <td>103</td>
+            <td>104</td>
+            <td>105</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <section class="game-score">
+      <h2>Leaderboard</h2>
+      <table>
+        <thead>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Chance</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 &#x1F451;</td>
+            <td>jack and jones try</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="foot-container">
+    <div class="foot-container-box">
+      <div class="foot-container-box-info">
+        <img src="/assets/images/logo.png" alt="Website Logo" />
+        <h4>Univers Gamers</h4>
+        <p>
+          We are dedicated to providing reliable solutions and quality
+          services that help businesses and individuals grow with confidence.
+        </p>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Navigation</h4>
+        <div class="page-link">
+          <a href="">Home</a>
+          <a href="">Services</a><a href="">Blogs</a>
+          <a href="">About</a>
+        </div>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Contact</h4>
+        <p>
+          1234 Street Park Avenue City, AA 99999 +1(555)123 4567
+          info@example.com
+        </p>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Social</h4>
+        <div class="footcontainer-box-info-social">
+          <a href=""><img src="/assets/images/facebook.png" alt="Facebook icon" /></a>
+          <a href=""><img src="/assets/images/X.png" alt="X icon" /></a>
+          <a href=""><img src="/assets/images/linkedin.png" alt="Linkedin icon" /></a>
+        </div>
+      </div>
+    </div>
+    <code> &copy; 2025 Univers Gamers All Rights Reserved.</code>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

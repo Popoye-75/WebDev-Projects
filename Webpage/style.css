@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh;
+    min-width: 100%;
+    background-color: #ffffff;
+}
+
+#header {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./Asset/back1.png');
+}
+
+.upper {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding: 6px 8px;
+    height: max-content;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    margin-top: 2px;
+    transition: 1.2s;
+    align-items: center;
+    border-radius: 360px;
+    justify-content: center;
+    background: transparent;
+}
+
+.pf-logo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 360px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./Asset/logo.jpg');
+}
+
+.navbar {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    background: transparent;
+    justify-content: space-around;
+}
+
+.menu {
+    margin: auto;
+    display: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+ul {
+    top: 0;
+    gap: 15px;
+    right: 15px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    transition: 1s;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.eff {
+    gap: 20px;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+.eff>:nth-child(1) {
+    font-family: 'Rosario',Arial;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(243, 236, 236);
+}
+
+.eff>:nth-child(2) {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins','Rosario';
+}
+
+/* start from here */
+
+hr{
+    width: 100%;
+    border: none;
+    height: 5px;
+    background-color: black;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}

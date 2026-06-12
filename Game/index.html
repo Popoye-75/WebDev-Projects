@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test.com|CSS</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/numberhunt.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main-header">
+    <div class="main-header-logo">
+      <a href="/index.html"></a>
+    </div>
+    <nav class="main-header-navbar">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li class="main-header-navbar-dropdown">
+          <a href="#">Games</a>
+          <div class="main-header-navbar-dropdown-content">
+            <a href="/numberhunt.html">Number Hunt</a>
+            <a href="/millionaire.html">Millionaire</a>
+            <a href="#">Tic Tac Toe</a>
+            <a href="#">Spin Wheel</a>
+          </div>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li class="main-header-navbar-dropdown"><a href="#">Contact</a></li>
+        <li><a href="/about.html">About us</a></li>
+      </ul>
+    </nav>
+    <button onclick="showLogin()" class="main-header-login">Login</button>
+  </div>
+
+  <!-- -------------LogIn page------------------ -->
+
+  <div id="loginInterface" class="login">
+    <div class="login-info">
+      <h2>Login</h2>
+      <form action="#">
+        <label for="loginEmail">Email</label><br />
+        <input id="loginEmail" type="email" placeholder="Email" /><br />
+        <label for="loginPassword">Password</label><br />
+        <input id="loginPassword" type="password" placeholder="Password" /><br />
+        <label for="rememberMe">
+          <input id="rememberMe" type="checkbox" /> Remember me
+        </label><br />
+        <button type="submit" class="login-info-btn btn">Log In</button>
+      </form>
+      <p>Don't have an account? <a onclick="showSignUp()" href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+  <!-- -------------SignUp page------------------ -->
+
+  <div id="signInterface" class="signUp login">
+    <div class="login-info">
+      <h2>Sign Up</h2>
+      <form action="#">
+        <label for="signName">Name</label><br />
+        <input id="signName" type="text" placeholder="Name" /><br />
+        <label for="signEmail">Email</label><br />
+        <input id="signEmail" type="email" placeholder="Email" /><br />
+        <label for="signPassword">Password</label><br />
+        <input id="signPassword" type="password" placeholder="Password" /><br />
+        <button type="submit" class="singUp login-info-btn btn">Submit</button>
+      </form>
+      <p>Aready have an account? <a onclick="showLogin()" href="#">Sign In</a></p>
+    </div>
+  </div>
+
+  <!-- ==============Main section============= -->
+  <div class="wrapper">
+    <main class="hero-section">
+      <div class="hero-section-heading">
+        <h1>Unleash the Fun!</h1>
+        <p class="hero-section-quote">
+          Explore exciting games and challenge your skills. <br />
+          Level up your life, one game at a time.<br />
+          The next great challenge is waiting for you. Are you ready?<br />
+          Unleash your inner hero and conquer new worlds.<br />
+          Every quest begins with a single step. Start your adventure now.
+        </p>
+        <div class="hero-section-btn">
+          <button onclick="showSignUp()" class="btn">Join Us</button>
+          <button class="btn">Play now</button>
+        </div>
+      </div>
+      <div class="hero-section-image">
+        <img src="/assets/images/pic5.jpg" alt="Toys Image" />
+      </div>
+    </main>
+
+    <!-- ====================SECTION 1st==================== -->
+    <hr />
+
+    <section class="container">
+      <h2>Get Ready to Play</h2>
+      <div class="container-gameInfo">
+        <img src="/assets/images/gusse-number.png" alt="picture of Guess The Number." />
+        <div class="container-gameInfo-about">
+          <h3>Guess The Number</h3>
+          <p>
+            Challenging & Thrilling <br />
+            Step into the ultimate test of wit and strategy with The Number
+            Game. This isn't just a game; it's a battle against numbers. Each
+            guess brings you closer to victory or defeat. Are you brave enough
+            to take on the challenge? Test your instincts and luck. Guess the
+            secret number and claim your victory. It's a quick, thrilling
+            challenge for all.
+          </p>
+        </div>
+      </div>
+      <div class="container-gameInfo">
+        <div class="container-gameInfo-about">
+          <h3>Millionaire</h3>
+          <p>
+            Dream of becoming a millionaire? Your journey begins here. Put
+            your wits to the ultimate test, answer trivia questions, and claim
+            your spot as a genius. The top prize is within your reach! Answer
+            trivia questions to climb the ladder to a million. Are you smart
+            enough to win the ultimate knowledge challenge?
+          </p>
+        </div>
+        <img src="/assets/images/millionaire.png" alt="Picture of Millionaire" />
+      </div>
+      <div class="container-gameInfo">
+        <img src="/assets/images/tic-tac-toe.png" alt="Picture of Tic Tac Toe." />
+        <div class="container-gameInfo-about">
+          <h3>Tic Tac Toe</h3>
+          <p>
+            A timeless game of strategy. Can you outsmart your opponent and
+            get three in a row? It’s simple, yet endlessly challenging
+            Challenge a friend or the computer to a classic game of strategy.
+            Tic Tac Toe is simple to learn but requires a sharp mind to
+            master. Place your 'X's and 'O's wisely to claim victory!
+          </p>
+        </div>
+      </div>
+      <div class="container-gameInfo">
+        <div class="container-gameInfo-about">
+          <h3>Spin Wheel</h3>
+          <p>
+            Feeling lucky? Give our Spin Wheel a whirl for a chance to win
+            amazing prizes! Just spin the wheel and let fate decide. What will
+            you win today? Spin the wheel and let fate decide your prize. An
+            exciting game of pure chance and instant rewards. Get lucky today!
+          </p>
+        </div>
+        <img src="/assets/images/spin-wheel.png" alt="Picture of Spin Wheel." />
+      </div>
+    </section>
+    <hr />
+    <!-- ====================SECTION 2nd==================== -->
+    <section class="container-testimonial">
+      <div class="container-testimonial-info">
+        <img src="/assets/images/test2.png" alt="" />
+        <h4>Manager</h4>
+        <p>
+          "Their strategic vision and decisive leadership were key to our
+          project's success."
+        </p>
+      </div>
+      <div class="container-testimonial-info">
+        <img src="/assets/images/test1.png" alt="" />
+        <h4>UX Designer</h4>
+        <p>
+          "A natural leader who effectively guides the team towards achieving
+          goals."
+        </p>
+      </div>
+      <div class="container-testimonial-info">
+        <img src="/assets/images/test3.png" alt="" />
+        <h4>sofware Devloper</h4>
+        <p>
+          "They foster a positive work environment, making everyone feel
+          valued and heard."
+        </p>
+      </div>
+    </section>
+  </div>
+  <hr />
+  <footer class="foot-container">
+    <div class="foot-container-box">
+      <div class="foot-container-box-info">
+        <img src="/assets/images/logo.png" alt="Website Logo" />
+        <h4>Univers Gamers</h4>
+        <p>
+          We are dedicated to providing reliable solutions and quality
+          services that help businesses and individuals grow with confidence.
+        </p>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Navigation</h4>
+        <div class="page-link">
+          <a href="">Home</a><a href="">Services</a><a href="">Blogs</a><a href="">About</a>
+        </div>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Contact</h4>
+        <p>
+          1234 Street Park Avenue City, AA 99999 +1(555)123 4567
+          info@example.com
+        </p>
+      </div>
+      <div class="foot-container-box-info">
+        <h4>Social</h4>
+        <div class="footcontainer-box-info-social">
+          <a href=""><img src="/assets/images/facebook.png" alt="Facebook icon" /></a>
+          <a href=""><img src="/assets/images/X.png" alt="X icon" /></a>
+          <a href=""><img src="/assets/images/linkedin.png" alt="Linkedin icon" /></a>
+        </div>
+      </div>
+    </div>
+    <code> &copy; 2025 Univers Gamers All Rights Reserved.</code>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
