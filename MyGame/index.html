@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style-a.css">
+</head>
+
+<body id="main-body">
+    <!-- Header Section -->
+    <header class="main-head">
+        <div class="main-logo">
+        </div>
+        <span class="web-name">Game Center</span>
+        <nav class="navbar">
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>More</li>
+                </a>
+                <a href="#">
+                    <li>AboutUs</li>
+                </a>
+            </ul>
+            <div class="login-btn">
+                <button class="login" onclick="login()">LogIn</button>
+            </div>
+        </nav>
+    </header>
+
+    <!--Login section -->
+    <section id="login-section">
+        <!--Login form-->
+        <div class="login-box">
+            <h3>Log-In</h3>
+            <form action="submit" method="post">
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Username" name="user_name" required>
+                </div>
+
+                <div class="email">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" placeholder="Email" name="user_email" required>
+                </div>
+
+                <div class="pass">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" placeholder="Password" name="user_pass" required>
+                </div>
+
+                <div class="sub-btn">
+                    <button class="submit-btn">Submit</button>
+                    <span class="account">Don't have an account</span>
+                </div>
+            </form>
+        </div>
+
+        <!--Signup form-->
+        <div class="signup-box">
+            <h3>Sign-Up</h3>
+            <form action="submit" method="post">
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Username" name="user_name" required>
+                </div>
+
+                <div class="email">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" placeholder="Email" name="user_email" required>
+                </div>
+
+                <div class="pass">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" placeholder="Password" name="user_pass" required>
+                </div>
+
+                <div class="sub-btn">
+                    <button class="submit-btn">Submit</button>
+                    <span class="account">Already have account</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <main class="main-section">
+        <div class="box">
+            <div class="image-a"></div>
+            <span class="about">
+                Experience the classic game of Tic-Tac-Toe in a sleek, modern format. Challenge a friend or take on our
+                smart AI in a fast-paced battle of strategy and skill. With a clean, distraction-free design and instant
+                gameplay, it’s the perfect way to sharpen your mind during a quick break. No downloads needed—just jump
+                in, claim your X or O, and aim for three in a row to dominate the grid!
+            </span>
+        </div>
+        <div class="box">
+            <div class="image-b"></div>
+            <span class="about">
+                Test your knowledge and become a virtual Crorepati! Answer a series of challenging questions across
+                various topics and climb the money ladder step by step. Use lifelines wisely, think carefully, and see
+                how far you can go. Perfect for learning while having fun, this quiz game sharpens your brain and boosts
+                your confidence with every correct answer.
+            </span>
+        </div>
+        <div class="box">
+            <div class="image-c"></div>
+            <span class="about">
+                Put your observation and speed skills to the test with Number Hunt! Find hidden numbers in a chaotic
+                grid before time runs out. As levels increase, the difficulty rises, making it more exciting and
+                challenging. A perfect game to improve focus, pattern recognition, and quick thinking while having loads
+                of fun.
+            </span>
+        </div>
+        <div class="box">
+            <div class="image-d"></div>
+            <span class="about">
+                Relive the nostalgia of the classic Snake Game! Control the snake, eat food to grow longer, and avoid
+                crashing into walls or yourself. The longer you survive, the higher your score. Simple controls,
+                addictive gameplay, and increasing difficulty make it a timeless arcade experience you can enjoy
+                anytime.
+            </span>
+        </div>
+    </main>
+
+</body>
+<script src="script.js"></script>
+
+</html>

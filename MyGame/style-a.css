@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Outfit:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(rgb(192, 78, 78), rgb(198, 80, 164), rgb(203, 195, 81), rgb(20, 75, 163));
+}
+
+.main-head {
+    top: 0px;
+    gap: 10%;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    /* <----- Change the flex in none */
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(94, 90, 90, 0.4);
+}
+
+.main-logo {
+    left: 5%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./asset/main.png');
+}
+
+.main-logo:hover {
+    transition: ease-in-out 1s;
+    transform: rotate(360deg);
+}
+
+.web-name {
+    /* left: 15%; */
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    /* position: absolute; */
+    font-family: Georgia, 'Times New Roman', Times, "Chocolate";
+}
+
+.navbar {
+    right: 3%;
+    width: 50%;
+    height: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    background: transparent;
+    justify-content: space-evenly;
+}
+
+.navbar ul {
+    gap: 20px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navbar a {
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-style: normal;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: "Chocolate Classical Sans", sans-serif;
+}
+
+.navbar li {
+    /* padding: 8px;
+    border-radius: 40px;
+    list-style-type: none;
+    background: transparent; */
+    padding: 8px;
+    border-radius: 40px;
+    list-style-type: none;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.navbar li:hover {
+    transition: 1s;
+    color: rgb(0, 0, 0);
+    /* background-color: rgb(226, 188, 140); */
+    transform: scale(1.1);
+    /* 🔥 zoom effect */
+    background-color: rgb(226, 188, 140);
+
+}
+
+.login {
+    padding: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    font-family: "Outfit", sans-serif;
+    background-color: rgb(21, 37, 216);
+}
+
+.login:hover {
+    color: black;
+    background-color: cyan;
+}
+
+#login-section {
+    width: 50vh;
+    height: 55vh;
+    display: none;
+    /* <----- Change the block in none */
+    border-radius: 40px;
+    box-shadow: 0px 20px 30px rgb(18, 18, 18);
+    background: linear-gradient(45deg, red, rgb(215, 215, 45), rgb(27, 163, 166), purple);
+}
+
+.login-box {
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* <----- Change the block in none */
+    background: transparent;
+}
+
+h3 {
+    top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    font-style: normal;
+    font-family: "Outfit", sans-serif;
+}
+
+form {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    height: fit-content;
+    align-items: baseline;
+    /* justify-items: center; */
+    flex-direction: column;
+    background: transparent;
+}
+
+.name,
+.email,
+.pass {
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    /* text-align: start; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    width: 85%;
+    font: 1rem;
+    border: none;
+    padding-top: 8px;
+    padding-left: 10px;
+    position: relative;
+    border-radius: 20px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+}
+
+.sub-btn {
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 90%;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    font-family: "Chocolate", sans-serif;
+    background-color: rgba(0, 255, 247, 0.938);
+}
+
+.submit-btn:hover {
+    color: white;
+    background-color: rgb(25, 40, 56);
+}
+
+.account {
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.account:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.signup-box {
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* <----- Change the block
+     in none */
+    background: transparent;
+}
+
+.main-section {
+    top: 18vh;
+    gap: 30px;
+    width: 90%;
+    height: 100%;
+    /* Charne to none or block */
+    display: grid;
+    padding: 10px;
+    position: absolute;
+    background: transparent;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    /* background-color: blue; */
+}
+
+.box {
+    gap: 20px;
+    width: 100%;
+    height: 80%;
+    /* z-index: -10; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    position: relative;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(196, 116, 51, 0.386);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.946);
+    cursor: pointer;
+}
+
+.image-a,
+.image-b,
+.image-c,
+.image-d {
+    width: 20vh;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-a {
+    background-image: url("./asset/tic.png");
+}
+
+.image-b {
+    background-image: url("./asset/kbc.jpeg")
+}
+
+.image-c {
+    background-image: url("./asset/num.png")
+}
+
+.image-d {
+    background-image: url("./asset/snake.jpeg")
+}
+
+
+.about {
+    flex: 1;
+    word-wrap: break-word;
+    min-width: 200px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: oblique;
+    font-family: "Chocolate Classical Sans", Georgia, serif;
+}
