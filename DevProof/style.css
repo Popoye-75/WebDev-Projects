@@ -1,0 +1,124 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ :root {
+     --font-stack: 'Helvetica', sans-serif;
+     --back-color: rgb(4, 9, 49);
+ }
+
+ html {
+     font-size: 16px;
+ }
+
+ body {
+     background-color: rgb(14, 15, 14);
+     height: 1000vh;
+ }
+
+ div.header-content {
+     width: 100%;
+     padding: 8px;
+     height: 3.5rem;
+     position: fixed;
+     display: inline-flex;
+     justify-content: space-around;
+     border-bottom: 1px solid rgba(33, 39, 67, 0.998);
+     background: var(--back-color);
+ }
+
+ .logo-section {
+     gap: 5px;
+     align-items: center;
+     display: inline-flex;
+     /* justify-content: center; */
+     background: transparent;
+ }
+
+ .logo-section>:nth-child(1) {
+     text-shadow: 0px 0px 10px #a9a3de;
+     font-weight: bold;
+     color: #6918f4;
+     font-family: var(--font-stack);
+ }
+
+ .logo-section>:nth-child(2) {
+     font-weight: 500;
+     font-family: var(--font-stack);
+     color: white;
+ }
+
+ /* Start here */
+ .navbar {
+     height: 95%;
+     max-width: 50%;
+     min-width: 40%;
+     overflow: hidden;
+     align-items: center;
+     display: inline-flex;
+     justify-content: center;
+     background: red;
+ }
+
+ ul {
+     margin: 0;
+     gap: 10px;
+     padding: 0;
+     display: inline-flex;
+     list-style-type: none;
+     background: transparent;
+ }
+
+ ul li {
+     background: transparent;
+ }
+
+ ul li a {
+     display: block;
+     cursor: pointer;
+     padding: 1em 0.5em;
+     text-decoration: none;
+     color: rgb(56, 123, 239);
+     font-family: var(--font-stack);
+ }
+
+ div.other {
+     gap: 10px;
+     min-width: 30%;
+     max-width: 65%;
+     align-items: center;
+     display: inline-flex;
+     background-color: blue;
+     justify-content: space-between;
+ }
+
+ div.other>:first-child {
+     border: none;
+     background: white;
+     border-radius: 2.5rem;
+     padding: 0.6em 2.5em 0.6em 1em;
+ }
+
+ div.contrast-btn {
+     gap: 20px;
+     background: pink;
+     align-items: center;
+     display: inline-flex;
+     justify-content: space-evenly;
+
+ }
+ div.contrast-btn::before{
+    content: "🔆";
+    color: black;
+ }
+
+ div.contrast-btn>:last-child {
+     /* font-size:1.2rem; */
+     border: none;
+     color: white;
+     border-radius: 0.8em;
+     padding: 0.6em 0.6em;
+     background: rgb(56, 123, 239);
+ }
