@@ -258,9 +258,28 @@ h1 {
 }
 
 h1>span {
-    color: transparent;
-    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+    /* color: transparent;
+    --webkit-background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
     background-clip: text;
+    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+    --wekit-background-clip: text;
+    --text-shadow: none; */
+
+    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+  background-size: cover;
+  background-position: center;
+
+  /* 2. Clip the background to the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text fill transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  /* Optional styling */
+  /* font-size: 5rem;
+  font-weight: bold; */
 }
 
 .para {
@@ -279,8 +298,6 @@ h1>span {
     font-size: 1.5rem;
     color: rgb(219 215 215 / 70%);
 }
-
-
 
 .twoButton {
     gap: 2rem;
@@ -364,19 +381,23 @@ section.main-2 {
 
 .boxes ul {
     display: flex;
-    padding: 1rem;
+    /* padding: 1rem; */
     list-style-type: none;
     border-radius: 1rem;
-    align-items: center;
+    /* align-items: center; */
     color: rgb(241, 241, 241);
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* border: 0.2rem solid grey; */
     border: 0.2rem solid #474de6;
 }
 
 .boxes ul li {
-    width: calc(100%/6);
+    display: flex;
+    flex: 1;
+    border:2px solid #001bff;
+    /* width: calc(100%/6); */
 }
+/* 
 
 .boxes ul>:nth-child(even) {
     border-inline: 2px solid rgb(84, 84, 87);
@@ -384,7 +405,7 @@ section.main-2 {
 
 .boxes ul>:last-child {
     border-inline-end: none;
-}
+} */
 
 .skill-content {
     padding-inline-start: 1rem;
