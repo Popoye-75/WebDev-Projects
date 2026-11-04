@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 @font-face {
@@ -19,6 +19,7 @@ html {
 :root {
     --bor-color: 0.2rem solid rgba(60, 60, 60, 0.5);
     --back-color: rgb(6, 6, 20);
+    --button-back-color: rgb(68, 20, 178);
 }
 
 body {
@@ -61,12 +62,10 @@ header {
     width: 2.5rem;
     height: 2.5rem;
     display: inline-block;
+    color: rgb(86, 46, 232);
     filter: drop-shadow(0px 0px 1.5px rgb(83, 107, 180));
 }
 
-.logo-icon path {
-    fill: rgb(86, 46, 232);
-}
 
 .logo-section:nth-child(1) {
     cursor: pointer;
@@ -102,6 +101,7 @@ ul li a {
     border: 2px solid transparent;
     padding: 0.5rem 0.2rem 0.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: border-bottom 0.8s ease-in-out;
 }
 
 a:hover {
@@ -126,7 +126,6 @@ a:hover {
     color: white;
     border-radius: 0.8rem;
     padding: 0.8rem 6.2rem 0.8rem 2.8rem;
-    /* background: rgba(36, 54, 63, 0.482); */
     background: rgb(0 137 214 / 14%);
     box-shadow: 0px 0px 20px 7px #524d4d6d;
     outline: 0.1rem solid rgb(105, 104, 125);
@@ -171,7 +170,6 @@ a:hover {
     font-weight: 500;
     border-radius: 1rem;
     padding: 0.8rem 1rem;
-    /* background-color: purple; */
     background: rgb(68, 20, 178);
 }
 
@@ -192,7 +190,6 @@ main {
     min-width: 95rem;
     flex-direction: column;
     justify-content: center;
-    /* min-height: 100vh; */
 }
 
 section.main-1 {
@@ -217,22 +214,23 @@ section.main-1 {
 }
 
 .twoBox>:first-child {
-    font-family: "Myfont1";
     color: white;
     font-size: 1.2rem;
     position: relative;
     border-radius: 1.5rem;
+    font-family: "Myfont1";
+    padding: 0.4rem 1rem 0.4rem 2rem;
     background: rgb(0 137 214 / 14%);
     border: 0.2rem solid rgba(128, 128, 128, 0.262);
-    padding: 0.4rem 1rem 0.4rem 2.5rem;
 }
 
-.twoBox>:first-child::before {
-    top: 0;
-    content: '&';
-    left: 0.6rem;
+.dot-icon {
+    top: 50%;
+    left: 10%;
+    width: 1.2rem;
+    height: 1.2rem;
     position: absolute;
-    font-weight: bolder;
+    transform: translate(-50%, -50%);
 }
 
 .twoBox>:last-child {
@@ -255,31 +253,25 @@ h1 {
     font-weight: bold;
     position: relative;
     font-family: "Myfont2";
+    position: relative;
 }
 
 h1>span {
-    /* color: transparent;
-    --webkit-background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+    color: transparent;
     background-clip: text;
-    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
-    --wekit-background-clip: text;
-    --text-shadow: none; */
-
-    background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
-  background-size: cover;
-  background-position: center;
-
-  /* 2. Clip the background to the text shape */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* 3. Make the text fill transparent so the background shows through */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  /* Optional styling */
-  /* font-size: 5rem;
-  font-weight: bold; */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1::after{
+    top:50%;
+    transform: translate(-25%,-50%);
+    right: 11rem;
+    content: '👋';
+    font-size: 3rem;
+    position:absolute;
 }
 
 .para {
@@ -308,32 +300,37 @@ h1>span {
     justify-content: flex-start;
 }
 
-.twoButton>button {
+.expPro,
+.expApi {
     cursor: pointer;
-    color: white;
     font-size: 1.2rem;
+    position: relative;
     border-radius: 1rem;
-    padding: 1rem 2rem;
-    background: rgb(68, 20, 178);
+    padding-block: 1rem;
+    padding-inline-end: 4rem;
+    padding-inline-start: 1rem;
+}
+
+.expPro {
+    color: white;
+    background: var(--button-back-color);
     border: 0.1rem solid transparent;
 }
 
-.twoButton>:last-child {
-    background: transparent;
-    border-color: rgb(105, 102, 102);
+.expApi {
+    color: rgb(247, 241, 241);
+    background: rgba(55, 55, 55, 0);
+    box-shadow: 0rem 0rem 20px 0px #79797929;
+    border: 0.1rem solid rgba(255, 254, 254, 0.4);
 }
 
-/* Start from here */
-.twoButton>:first-child::after {
-    content: '-->';
-
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.twoButton>:last-child::after {
-    content: "-->";
-
+.arrow-icon,
+.code-svg {
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    transform: translate(50%, -50%);
 }
 
 .part-2 {
@@ -370,90 +367,130 @@ h1>span {
 section.main-2 {
     display: flex;
     width: inherit;
-    padding-block-start: 1rem;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    justify-content: flex-start;
+}
+
+.main-2 ul {
+    gap: 2rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    padding: 1.5rem;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
-
-.boxes {
-    min-width: 98%;
-}
-
-.boxes ul {
-    display: flex;
-    /* padding: 1rem; */
+    padding-block: 2rem;
+    border-radius: 1.5rem;
     list-style-type: none;
-    border-radius: 1rem;
-    /* align-items: center; */
     color: rgb(241, 241, 241);
-    /* justify-content: space-between; */
-    /* border: 0.2rem solid grey; */
-    border: 0.2rem solid #474de6;
+    justify-content:space-around;
+    border: 0.2rem solid #12144c;
 }
 
-.boxes ul li {
+.main-2 ul li {
+    gap: 1.5rem;
     display: flex;
+    padding:0.5rem;
     flex: 1;
-    border:2px solid #001bff;
-    /* width: calc(100%/6); */
-}
-/* 
-
-.boxes ul>:nth-child(even) {
-    border-inline: 2px solid rgb(84, 84, 87);
+    align-items: center;
+    justify-content: flex-start;
+    /* text-wrap: nowrap; */
+    /* border-inline: white 1px solid; */
 }
 
-.boxes ul>:last-child {
-    border-inline-end: none;
-} */
-
-.skill-content {
-    padding-inline-start: 1rem;
-    justify-content: center;
+.skills-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-.skill-content>:nth-child(1) {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
+.set-svg {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+}
+
+.skill-icon {
+    color: rgb(86, 46, 232);
+    background: rgba(86, 46, 232, 0.342);
+}
+
+.project-icon {
+    color: green;
+    background: rgba(0, 128, 0, 0.342);
+}
+
+.concept-icon {
+    color: blue;
+    background: rgba(27, 83, 214, 0.342);
+}
+
+.proof-icon {
+    color: greenyellow;
+    background: rgba(0, 117, 128, 0.342);
+}
+
+.achievement-icon {
+    color: yellow;
+    background: rgba(255, 217, 0, 0.342);
+}
+.current-icon{
+    background: #3e00ff;
+}
+
+.skills-content>:nth-child(1) {
     font-size: 1.4rem;
 }
 
-.skills {
-    width: 45%;
+.skills-content>:nth-child(2) {
+    font-size: 2rem;
+}
+
+.skills-content>:nth-child(3) {
+    font-size: 1.5rem;
+}
+.main-2 ul li .last-list{
+    display: none;
+    /* display: inline-flex; */
+    background: white ;
+}
+
+.current-content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.skills>:first-child {
-    font-size: 2.1rem;
+.current-content>:first-child{
+    font-size: 1.3rem;
 }
-
-.skills>:last-child{
-    font-size: 1.6rem;
-}
-/*
-.skill-content>:nth-child(3) {
+.current-content>:nth-child(2){
     font-size: 1.2rem;
+    position: relative;
+    padding-inline-start: 1rem;
+    color: rgb(20, 219, 20);
 }
-
-.skill-content.last-skill>:nth-child(2) {
-    font-size: 1.2rem; 
-    background-color: rgb(116, 116, 131);
-} */
-
-.skill-content .bar {
+.curr-dot-icon{
+    top: 50%;
+    position: absolute; 
+    transform: translate(-75%,-50%);
+}
+.bar{
+    top: 0.8rem;
     width: 100%;
-    height: 0.5rem;
-    background: beige;
+    height: 0.65rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.713);
+}
+.bar>:first-child{
+    width: 70%;
+    height: 100%;
+    background: blue;
+    display: inline-block;
     border-radius: 0.5rem;
 }
+
 
 .mid-heading {
     min-width: inherit;
@@ -478,7 +515,7 @@ section.main-2 {
 }
 
 section.main-3 {
-    display: flex;
+    display: none;
     width: inherit;
     align-items: center;
     padding-inline: 1rem;
@@ -487,7 +524,7 @@ section.main-3 {
 
 .main-3-box {
     gap: 2rem;
-    display: flex;
+    display: none;
     min-width: 98%;
     align-items: center;
     justify-content: space-between;
@@ -518,7 +555,7 @@ section.main-3 {
 }
 
 .last-heading {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     justify-content: center;

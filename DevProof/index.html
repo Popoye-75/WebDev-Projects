@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <link rel="stylesheet" href="DevStyle.css">
     <title>Dev Proof</title>
 </head>
@@ -14,9 +15,8 @@
         <div class="wrapper-header">
             <!-- Logo Section -->
             <div class="logo-section">
-                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                    <path
-                        d="M392.8 65.2C375.8 60.3 358.1 70.2 353.2 87.2L225.2 535.2C220.3 552.2 230.2 569.9 247.2 574.8C264.2 579.7 281.9 569.8 286.8 552.8L414.8 104.8C419.7 87.8 409.8 70.1 392.8 65.2zM457.4 201.3C444.9 213.8 444.9 234.1 457.4 246.6L530.8 320L457.4 393.4C444.9 405.9 444.9 426.2 457.4 438.7C469.9 451.2 490.2 451.2 502.7 438.7L598.7 342.7C611.2 330.2 611.2 309.9 598.7 297.4L502.7 201.4C490.2 188.9 469.9 188.9 457.4 201.4zM182.7 201.3C170.2 188.8 149.9 188.8 137.4 201.3L41.4 297.3C28.9 309.8 28.9 330.1 41.4 342.6L137.4 438.6C149.9 451.1 170.2 451.1 182.7 438.6C195.2 426.1 195.2 405.8 182.7 393.3L109.3 320L182.6 246.6C195.1 234.1 195.1 213.8 182.6 201.3z" />
+                <svg class="logo-icon">
+                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#code-svg">
                 </svg>
                 <span>DevProof</span>
             </div>
@@ -64,7 +64,12 @@
         <section class="main-1">
             <div class="part-1">
                 <div class="twoBox">
-                    <span>Developer Profile</span>
+                    <span>
+                        <svg class="dot-icon">
+                            <use href="./assets/SvgIcons/SvgSprites/sprite.svg#bold-dot">
+                        </svg>
+                        Developer Profile
+                    </span>
                     <span>Online</span>
                 </div>
 
@@ -84,11 +89,15 @@
 
                 <div class="twoButton">
                     <button class="expPro">Explore My Profile
-                        <!-- <svg class="logo-icon">
-                            <use href="./assets/SvgIcons/SvgSprites/sprite.svg#arr-redir">
-                        </svg> -->
+                        <svg class="arrow-icon">
+                            <use href="./assets/SvgIcons/SvgSprites/sprite.svg#arrow-svg">
+                        </svg>
                     </button>
-                    <button class="expApi">Explore API </button>
+                    <button class="expApi">Explore API
+                        <svg class="arrow-icon">
+                            <use href="./assets/SvgIcons/SvgSprites/sprite.svg#code-svg">
+                        </svg>
+                    </button>
                 </div>
             </div>
 
@@ -113,112 +122,87 @@
         </section>
 
         <section class="main-2">
-            <div class="boxes">
-                <ul>
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#code-svg">
-                                </svg>
-                                <span>Skills</span>
-                            </div>
+            <ul>
+                <li>
+                    <svg class="skill-icon set-svg">
+                        <use href="./assets/SvgIcons/SvgSprites/sprite.svg#code-svg">
+                    </svg>
 
-                            <div class="skills">
-                                <span>18</span>
-                                <span>Strong in 8</span>
-                            </div>
+                    <div class="skills-content">
+                        <span>Skills</span>
+                        <span>18</span>
+                        <span>Strong in 8</span>
+                    </div>
+                </li>
+
+                <li>
+                    <svg class="project-icon set-svg">
+                        <use href="./assets/SvgIcons/SvgSprites/sprite.svg#Project-svg">
+                    </svg>
+
+                    <div class="skills-content">
+                        <span>Projects</span>
+                        <span>7</span>
+                        <span>Public Repos</span>
+                    </div>
+                </li>
+
+                <li>
+                    <svg class="concept-icon set-svg">
+                        <use href="./assets/SvgIcons/SvgSprites/sprite.svg#concept-svg">
+                    </svg>
+
+                    <div class="skills-content">
+                        <span>Concepts</span>
+                        <span>62</span>
+                        <span>Understood</span>
+                    </div>
+                </li>
+
+                <li>
+                    <svg class="proof-icon set-svg">
+                        <use href="./assets/SvgIcons/SvgSprites/sprite.svg#proof-svg">
+                    </svg>
+
+                    <div class="skills-content">
+                        <span>Proofs</span>
+                        <span>124</span>
+                        <span>Verifiable</span>
+                    </div>
+                </li>
+
+                <li>
+                    <svg class="achievement-icon set-svg">
+                        <use href="./assets/SvgIcons/SvgSprites/sprite.svg#achiem-svg">
+                    </svg>
+
+                    <div class="skills-content">
+                        <span>Achievements</span>
+                        <span>11</span>
+                        <span>Unlocked</span>
+                    </div>
+                </li>
+
+
+                <!-- start From here -->
+                <li>
+                    <div class="last-list">
+                        <svg class="current-icon set-svg">
+                            <use href="./assets/SvgIcons/SvgSprites/sprite.svg#current-svg"></use>
+                        </svg>
+
+                        <div class="current-content">
+                            <span>Currrent Status</span>
+                            <span>
+                                <svg class="curr-dot-icon set-svg">
+                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#bold-dot">
+                                </svg>
+                                Learning Backend Development</span>
+                            <div class="bar"><span></span></div>
                         </div>
-                    </li>
-
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#Project-svg">
-                                </svg>
-                                </svg>
-                                <span>Skills</span>
-                            </div>
-
-                            <div class="skills">
-                                <span>18</span>
-                                <span>Strong in 8</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#concept-svg">
-                                </svg>
-                                </svg>
-                                <span>Skills</span>
-                            </div>
-
-                            <div class="skills">
-                                <span>18</span>
-                                <span>Strong in 8</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#proof-svg">
-                                </svg>
-                                </svg>
-                                <span>Skills</span>
-                            </div>
-
-                            <div class="skills">
-                                <span>18</span>
-                                <span>Strong in 8</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#achiem-svg">
-                                </svg>
-                                </svg>
-                                <span>Skills</span>
-                            </div>
-
-                            <div class="skills">
-                                <span>18</span>
-                                <span>Strong in 8</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="skill-content">
-                            <div class="skill-logo">
-                                <svg class="logo-icon">
-                                    <use href="./assets/SvgIcons/SvgSprites/sprite.svg#current-svg"></use>
-                                </svg>
-                                </svg>
-                                <span>Skills</span>
-                            </div>
-
-                           <div class="skill-content last-skill">
-                                <span>Current Status</span>
-                                <span>Learning Backend Development</span>
-                                <div class="bar"></div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
+                    </div>
+                </li>
+            </ul>
         </section>
 
         <div class="mid-heading">
