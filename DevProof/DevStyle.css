@@ -253,7 +253,7 @@ h1 {
     font-weight: bold;
     position: relative;
     font-family: "Myfont2";
-    position: relative;
+    /* position: relative; */
 }
 
 h1>span {
