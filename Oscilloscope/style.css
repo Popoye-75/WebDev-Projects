@@ -2,5 +2,33 @@
     box-sizing: border-box;
 }
 body{
-    background: grey;
+    margin:0;
+    background: rgb(199, 191, 191);
+    height: 100vh;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    perspective: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    background: coral;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 40px rgb(67, 65, 65);
+    transition: width 2s,height 2s, background 3s,transform 3s,box-shadow 3s;
+}
+.main:hover .box{
+    transform-style: preserve-3d;
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    width:40vh;
+    height: 40vh;
+    box-shadow: -20px -20px 40px rgb(67, 65, 65);
+    background: rgb(79, 234, 226);
 }
