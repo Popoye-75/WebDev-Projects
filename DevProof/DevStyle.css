@@ -1,5 +1,5 @@
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -265,13 +265,14 @@ h1>span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-h1::after{
-    top:50%;
-    transform: translate(-25%,-50%);
+
+h1::after {
+    top: 50%;
+    transform: translate(-25%, -50%);
     right: 11rem;
     content: '👋';
     font-size: 3rem;
-    position:absolute;
+    position: absolute;
 }
 
 .para {
@@ -341,6 +342,10 @@ h1::after{
 }
 
 .box-c {
+    background-image: url('./assets/Logos/bg-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     top: 4rem;
     display: flex;
     position: relative;
@@ -363,7 +368,6 @@ h1::after{
     background: rgba(38, 40, 94, 0.7);
 }
 
-/* start from here  */
 section.main-2 {
     display: flex;
     width: inherit;
@@ -384,7 +388,7 @@ section.main-2 {
     border-radius: 1.5rem;
     list-style-type: none;
     color: rgb(241, 241, 241);
-    justify-content:space-around;
+    justify-content: space-around;
     border: 0.2rem solid #12144c;
 }
 
@@ -392,17 +396,18 @@ section.main-2 {
     flex: 1;
     gap: 1.5rem;
     display: flex;
-    padding:0.5rem;
+    padding: 0.5rem;
     align-items: flex-start;
     justify-content: stretch;
     border-inline-end: 0.2rem solid white;
 }
-.main-2 ul>:last-child{
+
+.main-2 ul>:last-child {
     display: flex;
     padding: 0.8rem;
     white-space: nowrap;
     border-radius: 0.5rem;
-    border-inline-end:transparent;
+    border-inline-end: transparent;
     background: rgba(36, 46, 71, 0.4);
 }
 
@@ -447,7 +452,8 @@ section.main-2 {
     color: yellow;
     background: rgba(255, 217, 0, 0.342);
 }
-.current-icon{
+
+.current-icon {
     background: #3e00ff;
 }
 
@@ -463,28 +469,30 @@ section.main-2 {
     font-size: 1.4rem;
 }
 
-.current-content{
+.current-content {
     gap: 0.8rem;
     display: flex;
     flex-direction: column;
 }
 
-.current-content>:first-child{
+.current-content>:first-child {
     font-size: 1.4rem;
 }
-.current-content>:nth-child(2){
+
+.current-content>:nth-child(2) {
     font-size: 1.2rem;
     position: relative;
     color: rgb(20, 219, 20);
     padding-inline-start: 1rem;
 }
 
-.curr-dot-icon{
+.curr-dot-icon {
     top: 50%;
-    position: absolute; 
-    transform: translate(-75%,-50%);
+    position: absolute;
+    transform: translate(-75%, -50%);
 }
-.bar{
+
+.bar {
     width: 100%;
     height: 0.65rem;
     position: relative;
@@ -492,7 +500,8 @@ section.main-2 {
     border-radius: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
 }
-.bar>:first-child{
+
+.bar>:first-child {
     width: 70%;
     height: 100%;
     background: blue;
@@ -501,111 +510,253 @@ section.main-2 {
     border-radius: inherit;
 }
 
+
 /* Mid Heading */
-.mid-heading {
-    position: relative;
-    min-width: inherit;
-    align-items: center;
-    display: inline-block;
-}
-
-.mid-heading>:first-child {
-    margin: 0;
-    color: white;
-    font-size: 2rem;
-    font-family: "Myfont1";
-    padding-inline-start: 3rem;
-}
-
-.mid-heading>:first-child::before{
-    top: 50%;
-    transform: translate(20%,-50%);
-    content: '&&';
-    position: absolute;
-}
-
-.mid-heading>:last-child {
-    color: white;
-    font-size: 1.6rem;
-    font-family: "Myfont1";
-    padding-inline-start: 3rem;
-}
-
 section.main-3 {
-    display: none;
+    display: flex;
     width: inherit;
+    /* background: red; */
     align-items: center;
-    padding-inline: 1rem;
+    padding-inline: 3rem;
+    justify-content: space-between;
+}
+
+.mid-heading {
+    gap: 1.5rem;
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
 }
 
-.main-3-box {
-    gap: 2rem;
-    display: none;
-    min-width: 98%;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: blue; */
+.inner-logo {
+    display: block;
 }
 
-.main-3-box {
+.inner-logo .mid-svg {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+}
+
+.inner-para {
+    margin: 0;
     color: white;
+}
+
+.inner-para>:first-child {
+    margin: 0;
+    font-size: 2.4rem;
+    font-family: 'Myfont1';
+}
+
+.inner-para>:last-child {
+    margin: 0;
+    font-size: 1.4rem;
+    padding-block: 1rem;
+    font-family: 'Myfont1';
+}
+
+.view-skill {
+    display: block;
+}
+
+.view-skill>:first-child {
+    gap: 0.2rem;
+    display: flex;
+    cursor: pointer;
+    color: #3e00ff;
+    font-weight: 600;
+    font-size: 1.4rem;
+    align-items: center;
+    font-family: 'Myfont1';
+    justify-content: center;
+}
+
+.arr-svg {
+    transition: transform 1s, color 1s;
+}
+
+.view-skill>:first-child:hover .arr-svg {
+    color: white;
+    transform: translate(1rem);
+}
+
+.arr-svg {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+}
+
+
+/* start from here  */
+section.main-4 {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
+
+}
+
+.main-4-box {
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 .box {
-    width: 24%;
-    padding: 1rem;
+    flex: 1;
     display: flex;
-    align-items: center;
-    border-radius: 0.5rem;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #12144c;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: stretch;
     border: 0.2rem solid grey;
 }
 
 .lang-logo {
-    gap: 5rem;
+    gap: 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: stretch;
+}
+
+.lang-logo>span {
+    display: block;
+    padding: 0.6rem;
+    border-radius: 50%;
+    /* position: relative; */
+    background-color: rgba(237, 167, 38, 0.09);
+}
+
+.java-icon,
+.spring-icon,
+.dsa-icon,
+.database-icon,
+.web-icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.dsa-icon {
+    transform: rotate(78deg);
+}
+
+.three-inputs {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.three-inputs>button {
+    cursor: pointer;
+    border-radius: 1rem;
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    background: #4a4e7077;
+    color: rgb(208, 202, 202);
+    border: 0.1rem solid transparent;
+}
+
+.three-inputs>:last-child {
+    background: transparent;
+    border: 0.1rem solid rgba(255, 255, 255, 0.415);
+}
+
+.descr>:first-child {
+    font-size: 1.6rem;
+    font-family: 'Myfont1';
+}
+
+.descr>:last-child {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.descr>:last-child>span::before {
+    content: '--';
+}
+
+.box>:nth-child(2) {
+    white-space: wrap;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-width: 95rem;
+    position: relative;
 }
 
 .last-heading {
-    display: none;
+    display: flex;
     align-items: center;
+    padding-block: 2rem;
     flex-direction: column;
     justify-content: center;
-    padding-block-end: 2rem;
-    /* background-color: #ffffff; */
 }
 
 .last-heading>:nth-child(1) {
-    position: relative;
-    font-family: "Myfont1";
-    padding-inline-start: 1rem;
-
-    color: white;
-    font-size: 1.9rem;
-}
-
-.last-heading>:nth-child(1)::before {
-    left: -2rem;
-    position: absolute;
-    content: '^';
-    color: white;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .last-heading>:nth-child(2) {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1.4rem;
+    font-family: 'Myfont1';
+    color: rgb(155, 130, 233);
 }
 
 .last-heading>:nth-child(3) {
+    gap: 0.8rem;
     border: none;
-    cursor: pointer;
+    color: white;
+    font-size: 1.4rem;
     border-radius: 1rem;
+    align-items: center;
+    display: inline-flex;
     padding: 0.8rem 2rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(33, 11, 89);
+    background: #3e00ff;
+    justify-content: center;
+}
+
+.arr-icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    display: block;
+    transition: transform 1s;
+}
+
+.last-heading>:nth-child(3):hover .arr-icon{
+    transform: translateX(1rem);
+}
+
+.last-logo>:first-child {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    color: blue;
+}
+
+.last-logo>:last-child {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Myfont1';
+    letter-spacing: 0.12rem;
 }
