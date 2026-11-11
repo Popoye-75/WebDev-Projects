@@ -17,14 +17,40 @@ html {
 }
 
 :root {
-    --bor-color: 0.2rem solid rgba(60, 60, 60, 0.5);
-    --back-color: rgb(6, 6, 20);
-    --button-back-color: rgb(68, 20, 178);
+    /* Backgrounds */
+    --bg-primary: #000612;
+    --bg-secondary: #010a1b;
+    --bg-surface: #0b1730;
+    --back-color: #000612;
+
+    /* Borders */
+    --border-color: #1a254a;
+    --border-subtle: #0f172a;
+
+    /* Brand color */
+    --primary: #4338f5;
+    --primary-hover: #5145ff;
+    --secondary: #6366f1;
+    --accent-cyan: #223dee;
+    --accent-green: #10b981;
+
+    /* Text */
+    --text-primary: #f1f5f9;
+    --text-secondary: #a8b8dd;
+    --text-muted: #7981b5;
+
+    /* Effects */
+    --glow-blue: rgba(67, 56, 245, 0.35);
+    --glow-cyan: rgba(34, 211, 238, 0.2);
+
+    --bor-color: 0.2rem solid rgba(26, 37, 74, 0.75);
+    /* 
+    --button-back-color: #4338f5; */
 }
 
 body {
     margin: 0;
-    background: var(--back-color);
+    background: var(--bg-secondary);
 }
 
 /* Header Section */
@@ -34,7 +60,7 @@ header {
     max-width: 100%;
     min-width: 95rem;
     position: relative;
-    background: rgb(4, 5, 20);
+    background: var(--back-color);
 }
 
 .wrapper-header {
@@ -105,7 +131,7 @@ ul li a {
 }
 
 a:hover {
-    border-bottom: 0.2rem solid currentColor;
+    border-bottom: 0.2rem solid var(--primary-hover);
 }
 
 .other {
@@ -137,11 +163,8 @@ a:hover {
     width: 2rem;
     height: 2rem;
     left: 0.6rem;
+    color: white;
     position: absolute;
-}
-
-.search-icon path {
-    fill: rgb(168, 168, 168);
 }
 
 .shortcut {
@@ -161,6 +184,8 @@ a:hover {
 .contrast-btn {
     gap: 1rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact {
@@ -170,17 +195,15 @@ a:hover {
     font-weight: 500;
     border-radius: 1rem;
     padding: 0.8rem 1rem;
-    background: rgb(68, 20, 178);
+    background: var(--primary);
 }
 
 .contrast-icon {
+    display: block;
+    color: white;
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
-}
-
-.contrast-icon path {
-    fill: rgb(168, 168, 168);
 }
 
 /* Main Seciton */
@@ -229,6 +252,7 @@ section.main-1 {
     left: 10%;
     width: 1.2rem;
     height: 1.2rem;
+    color: green;
     position: absolute;
     transform: translate(-50%, -50%);
 }
@@ -258,21 +282,24 @@ h1 {
 
 h1>span {
     background: linear-gradient(270deg, #3e00ff, #3e00ff, #001bff, #0007f8);
+    position: relative;
     color: transparent;
     background-clip: text;
     background-size: cover;
+    padding-inline-end: 0.5rem;
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-h1::after {
+h1>span::after {
     top: 50%;
-    transform: translate(-25%, -50%);
-    right: 11rem;
     content: '👋';
-    font-size: 3rem;
+    color: initial;
+    font-size: 3.5rem;
     position: absolute;
+    transform: translate(20%, -50%);
+    -webkit-text-fill-color: initial;
 }
 
 .para {
@@ -303,69 +330,113 @@ h1::after {
 
 .expPro,
 .expApi {
+    gap: 0.5rem;
+    display: flex;
+    padding: 1rem;
     cursor: pointer;
-    font-size: 1.2rem;
-    position: relative;
+    font-size: 1.3rem;
     border-radius: 1rem;
-    padding-block: 1rem;
-    padding-inline-end: 4rem;
-    padding-inline-start: 1rem;
+    align-items: center;
+    padding-inline: 1.5rem;
+    justify-content: center;
 }
 
 .expPro {
     color: white;
-    background: var(--button-back-color);
+    background: var(--primary);
     border: 0.1rem solid transparent;
 }
 
 .expApi {
-    color: rgb(247, 241, 241);
-    background: rgba(55, 55, 55, 0);
-    box-shadow: 0rem 0rem 20px 0px #79797929;
-    border: 0.1rem solid rgba(255, 254, 254, 0.4);
+    color: #cdb5e1;
+    background: var(--border-subtle);
+    box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.15);
+    border: 0.1rem solid rgba(148, 163, 184, 0.3);
 }
 
-.arrow-icon,
-.code-svg {
-    top: 50%;
+.code-icon {
+    display: block;
     width: 2rem;
     height: 2rem;
-    position: absolute;
-    transform: translate(50%, -50%);
 }
 
 .part-2 {
     width: 50%;
     display: flex;
+    position: relative;
+    align-items: center;
     flex-direction: column;
     background: transparent;
+    justify-content: center;
 }
 
 .box-c {
-    background-image: url('./assets/Logos/bg-image.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 4rem;
+    width: 100%;
     display: flex;
-    position: relative;
+    justify-content: center;
+}
+
+.bg-logo {
+    z-index: -1;
+    width: 35rem;
+    display: block;
+    position: absolute;
+    padding-block-start: 1.5rem;
+}
+
+.menus {
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
-.box-c>ul li {
-    list-style-type: none;
-}
-
-.box-c>:first-child {
-    color: white;
-    padding: 0.8rem;
-    background: rgba(38, 40, 94, 0.7);
-}
-
-.box-c>:last-child {
-    color: white;
+.menus ul {
     padding: 1rem;
-    background: rgba(38, 40, 94, 0.7);
+    list-style: none;
+    border-radius: 1rem;
+    background: #08071fdb;
+    border: 0.2rem solid #313194;
+    box-shadow: 0rem 0rem 10rem #322e9b78;
+}
+
+.menus ul li {
+    font-size: 1.2rem;
+    font-family: 'Myfont1';
+    color: rgb(209, 204, 213);
+}
+
+.menus ul :first-child {
+    gap: 0.2rem;
+    display: flex;
+    color: green;
+    font-weight: bold;
+    font-size: 1.2rem;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.larr-icon {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+
+.quotes {
+    left: 12rem;
+    display: flex;
+    bottom: -10rem;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-20deg);
+}
+
+.quotes>span {
+    font-size: 1.5rem;
+    font-family: 'Myfont1';
+    color: rgb(56, 33, 205);
 }
 
 section.main-2 {
@@ -390,6 +461,7 @@ section.main-2 {
     color: rgb(241, 241, 241);
     justify-content: space-around;
     border: 0.2rem solid #12144c;
+    background: var(--bg-secondary);
 }
 
 .main-2 ul li {
@@ -493,7 +565,7 @@ section.main-2 {
 }
 
 .bar {
-    width: 100%;
+    width: 90%;
     height: 0.65rem;
     position: relative;
     display: inline-block;
@@ -533,6 +605,7 @@ section.main-3 {
 }
 
 .inner-logo .mid-svg {
+    color: rgb(71, 8, 230);
     width: 3rem;
     height: 3rem;
     display: block;
@@ -611,15 +684,11 @@ section.main-4 {
 
 .box {
     flex: 1;
-    display: flex;
     color: white;
     padding: 1.5rem;
     border-radius: 1rem;
-    background: #12144c;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: stretch;
-    border: 0.2rem solid grey;
+    background: #191a4711;
+      border: 0.2rem solid grey;
 }
 
 .lang-logo {
@@ -630,11 +699,10 @@ section.main-4 {
 }
 
 .lang-logo>span {
-    display: block;
+    /* display: block; */
     padding: 0.6rem;
     border-radius: 50%;
-    /* position: relative; */
-    background-color: rgba(237, 167, 38, 0.09);
+    background-color: currentColor;
 }
 
 .java-icon,
@@ -649,6 +717,7 @@ section.main-4 {
 }
 
 .dsa-icon {
+    color: lightseagreen;
     transform: rotate(78deg);
 }
 
@@ -687,9 +756,10 @@ section.main-4 {
 }
 
 .box>:nth-child(2) {
-    white-space: wrap;
-    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 footer {
@@ -718,7 +788,7 @@ footer {
 .last-heading>:nth-child(2) {
     font-size: 1.4rem;
     font-family: 'Myfont1';
-    color: rgb(155, 130, 233);
+    color: var(--text-secondary);
 }
 
 .last-heading>:nth-child(3) {
@@ -726,12 +796,13 @@ footer {
     border: none;
     color: white;
     font-size: 1.4rem;
+    align-items: center;
     border-radius: 1rem;
     align-items: center;
     display: inline-flex;
     padding: 0.8rem 2rem;
-    background: #3e00ff;
     justify-content: center;
+    background: var(--primary);
 }
 
 .arr-icon {
@@ -742,7 +813,8 @@ footer {
     transition: transform 1s;
 }
 
-.last-heading>:nth-child(3):hover .arr-icon{
+.last-heading>:nth-child(3):hover .arr-icon,
+.expPro:hover .arr-icon {
     transform: translateX(1rem);
 }
 
@@ -750,7 +822,7 @@ footer {
     width: 2.5rem;
     height: 2.5rem;
     display: block;
-    color: blue;
+    color: var(--accent-cyan);
 }
 
 .last-logo>:last-child {
