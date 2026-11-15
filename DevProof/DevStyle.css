@@ -232,8 +232,8 @@ section.main-1 {
 
 .twoBox {
     display: inline-block;
-    padding-block-end: 1rem;
-    padding-block-start: 4rem;
+    padding-block-end: 1.5rem;
+    padding-block-start: 3rem;
 }
 
 .twoBox>:first-child {
@@ -348,7 +348,7 @@ h1>span::after {
 }
 
 .expApi {
-    color: #cdb5e1;
+    color: #eceaee;
     background: var(--border-subtle);
     box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.15);
     border: 0.1rem solid rgba(148, 163, 184, 0.3);
@@ -669,8 +669,6 @@ section.main-4 {
     padding-block: 2rem;
     padding-inline: 3rem;
     justify-content: center;
-    /* flex-wrap: wrap; */
-    /* justify-content: flex-start; */
 
 }
 
@@ -683,12 +681,12 @@ section.main-4 {
 }
 
 .box {
-    flex: 1;
+    /* flex: 1; */
     color: white;
     padding: 1.5rem;
     border-radius: 1rem;
     background: #191a4711;
-      border: 0.2rem solid grey;
+    border: 0.2rem solid grey;
 }
 
 .lang-logo {
@@ -702,7 +700,6 @@ section.main-4 {
     /* display: block; */
     padding: 0.6rem;
     border-radius: 50%;
-    background-color: currentColor;
 }
 
 .java-icon,
@@ -710,14 +707,14 @@ section.main-4 {
 .dsa-icon,
 .database-icon,
 .web-icon {
-    display: block;
     width: 2.5rem;
     height: 2.5rem;
+    display: block;
     border-radius: 50%;
 }
 
 .dsa-icon {
-    color: lightseagreen;
+    /* color: lightseagreen; */
     transform: rotate(78deg);
 }
 
@@ -726,19 +723,19 @@ section.main-4 {
     gap: 1rem;
 }
 
-.three-inputs>button {
+.three-inputs button {
     cursor: pointer;
-    border-radius: 1rem;
-    padding-block: 0.3rem;
-    padding-inline: 0.8rem;
-    background: #4a4e7077;
-    color: rgb(208, 202, 202);
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background: #9198d824;
+    color: rgb(241, 238, 238);
     border: 0.1rem solid transparent;
 }
 
-.three-inputs>:last-child {
+.three-inputs button:last-child {
     background: transparent;
-    border: 0.1rem solid rgba(255, 255, 255, 0.415);
+    border: 0.1rem solid rgba(255, 255, 255, 0.09);
 }
 
 .descr>:first-child {
@@ -751,14 +748,25 @@ section.main-4 {
     font-size: 1.4rem;
 }
 
-.descr>:last-child>span::before {
-    content: '--';
+/* .descr span:last-child::before {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: rgb(11, 233, 34);
+    padding-inline: 0.6rem;
+    background-color: blue;
+} */
+.bold-dot{
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    color: rgb(45, 254, 45);
 }
 
-.box>:nth-child(2) {
-    white-space: nowrap;
-    font-size: 1.5rem;
+.lang-logo+p {
+    font-size: 1rem;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -795,6 +803,7 @@ footer {
     gap: 0.8rem;
     border: none;
     color: white;
+    cursor: pointer;
     font-size: 1.4rem;
     align-items: center;
     border-radius: 1rem;
